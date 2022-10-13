@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    #screen {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background: green;
+    }
+
+    #scan,
+    #bezel {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #scan {
+      opacity: 75%;
+    }
+
+    .noselect {
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+      -khtml-user-select: none; /* Konqueror HTML */
+      -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+      user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+    }
+    #content {
+      font-family: VT323;
+      padding: 50px;
+      color: rgb(93, 253, 0);
+      font-size: 20px;
+      text-shadow: 1px 1px 2px rgb(150, 167, 124), 0 0 1em rgb(150, 167, 124),
+        0 0 0.2em rgb(150, 167, 124);
+    }
+  </style>
+
+  <body>
+    <div id="screen">
+      <img src="scanlines.png" id="scan" class="noselect" />
+      <img src="bezel.png" id="bezel" class="noselect" />
+      <div id="content">
+        <h1>Hello World</h1>
+        <p>This is an old terminal.</p>
+      </div>
+    </div>
+  </body>
+</html>
